@@ -37,21 +37,6 @@ The application integrates with Google's Gemini AI API using a hardcoded API key
 - System prompts for consistent optimization quality
 - Real-time processing feedback
 
-## Project Structure
-
-
-src/
-├── components/          # React components
-│   ├── Header.tsx      # Application header
-│   ├── InputSection.tsx # Input area and controls
-│   ├── OutputSection.tsx # Results display and download
-│   └── Icons.tsx       # SVG icons and loader
-├── hooks/
-│   └── useContentOptimizer.ts # Main optimization logic
-├── App.tsx             # Main application component
-├── main.tsx           # React entry point
-└── index.css          # Global styles and Tailwind imports
-
 
 ## Configuration
 
