@@ -24,7 +24,7 @@ A modern React-based web application that leverages Google's Gemini AI to optimi
 
 bash
 # Clone the repository
-git clone <repository-url>
+git clone [repository-ur](https://github.com/1xcoder-1/ai_powered_content_optimize)
 cd ai_powered_content_optimizer
 
 # Install dependencies
@@ -121,9 +121,6 @@ The application supports modern browsers with ES2022+ compatibility. It uses CSS
 4. Run `npm run lint` to ensure code quality
 5. Submit a pull request
 
-## License
-
-This project is proprietary and not currently licensed for public use.
 
 ## Notes
 
