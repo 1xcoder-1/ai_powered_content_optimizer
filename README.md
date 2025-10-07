@@ -45,12 +45,7 @@ TextFlow AI is a modern, sleek web application that harnesses the power of artif
 | **📋 Copy to Clipboard** | One-click copying of optimized content |
 | **🔒 Secure & Private** | Your content is processed securely and never stored |
 
-## 🎬 Demo
 
-<div align="center">
-  <img src="https://placehold.co/800x400/4F46E5/FFFFFF?text=TextFlow+AI+Demo" alt="TextFlow AI Demo" width="100%" />
-  <p><em>Experience the power of AI-driven content optimization</em></p>
-</div>
 
 ## ⚙️ Tech Stack
 
@@ -72,7 +67,7 @@ TextFlow AI is a modern, sleek web application that harnesses the power of artif
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ai_powered_content_optimizer.git
+   git clone https://github.com/1xcoder-1/textflow_ai.git
    ```
 
 2. Navigate to the project directory:
