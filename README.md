@@ -16,14 +16,6 @@
   <strong>Transform your content with cutting-edge AI technology. TextFlow AI leverages Google's Gemini AI to intelligently optimize and refine your text based on custom goals.</strong>
 </p>
 
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#demo">Demo</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#contributing">Contributing</a>
-</p>
 
 <hr />
 
