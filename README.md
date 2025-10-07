@@ -183,9 +183,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Abdul Mabood - [@11xcoder](https://twitter.com/11xcoder) - contact@textflowai.com
+Abdullah - [@11xcoder](https://twitter.com/11xcoder) - 1xcoder@proton.me
 
-Project Link: [https://github.com/your-username/ai_powered_content_optimizer](https://github.com/your-username/ai_powered_content_optimizer)
+Project Link: [https://github.com/your-username/ai_powered_content_optimizer](https://github.com/1xcoder-1/textflow_ai)
 
 ## 🙏 Acknowledgements
 
@@ -200,5 +200,5 @@ Project Link: [https://github.com/your-username/ai_powered_content_optimizer](ht
 
 <div align="center">
   <p>✨ Transform your content with AI-powered precision ✨</p>
-  <p>Made with ❤️ by Abdul Mabood</p>
+  <p>Made with ❤️ by 1xcoder</p>
 </div>
