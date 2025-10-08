@@ -162,11 +162,11 @@ interface OutputSectionProps {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
               </svg>
             </button>
-            <button 
+            {/* <button 
               onClick={downloadAsPDF}
               className="p-3 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors flex items-center shadow-sm hover:shadow-md"
               title="Download as PDF"
-            >
+            > */}
               <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
               </svg>
