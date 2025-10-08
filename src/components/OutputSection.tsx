@@ -8,81 +8,81 @@ interface OutputSectionProps {
   inputContent?: string;
 }
 
-const OutputSection: FC<OutputSectionProps> = ({ optimizedContent, isLoading, inputContent = '' }) => {
-  // Function to download content as TXT
-  const downloadAsTXT = () => {
-    try {
-      const blob = new Blob([optimizedContent], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `optimized-content-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.txt`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Error downloading TXT:', error);
-      alert('Failed to download TXT. Please try again.');
-    }
-  };
+// const OutputSection: FC<OutputSectionProps> = ({ optimizedContent, isLoading, inputContent = '' }) => {
+//   // Function to download content as TXT
+//   const downloadAsTXT = () => {
+//     try {
+//       const blob = new Blob([optimizedContent], { type: 'text/plain' });
+//       const url = URL.createObjectURL(blob);
+//       const a = document.createElement('a');
+//       a.href = url;
+//       a.download = `optimized-content-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.txt`;
+//       document.body.appendChild(a);
+//       a.click();
+//       document.body.removeChild(a);
+//       URL.revokeObjectURL(url);
+//     } catch (error) {
+//       console.error('Error downloading TXT:', error);
+//       alert('Failed to download TXT. Please try again.');
+//     }
+//   };
 
-  // Function to download content as PDF
-  const downloadAsPDF = async () => {
-    try {
-      // Create a temporary element for PDF generation with better formatting
-      const tempElement = document.createElement('div');
-      tempElement.style.padding = '30px';
-      tempElement.style.fontFamily = 'Helvetica, Arial, sans-serif';
-      tempElement.style.fontSize = '12pt';
-      tempElement.style.lineHeight = '1.6';
-      tempElement.style.width = '700px';
-      tempElement.style.backgroundColor = 'white';
-      tempElement.style.color = '#333';
-      tempElement.style.whiteSpace = 'pre-wrap';
-      tempElement.style.wordBreak = 'break-word';
+//   // Function to download content as PDF
+//   const downloadAsPDF = async () => {
+//     try {
+//       // Create a temporary element for PDF generation with better formatting
+//       const tempElement = document.createElement('div');
+//       tempElement.style.padding = '30px';
+//       tempElement.style.fontFamily = 'Helvetica, Arial, sans-serif';
+//       tempElement.style.fontSize = '12pt';
+//       tempElement.style.lineHeight = '1.6';
+//       tempElement.style.width = '700px';
+//       tempElement.style.backgroundColor = 'white';
+//       tempElement.style.color = '#333';
+//       tempElement.style.whiteSpace = 'pre-wrap';
+//       tempElement.style.wordBreak = 'break-word';
       
-      // Format the content for better PDF readability
-      const formattedContent = optimizedContent
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\n/g, '<br>');
+//       // Format the content for better PDF readability
+//       const formattedContent = optimizedContent
+//         .replace(/&/g, '&amp;')
+//         .replace(/</g, '&lt;')
+//         .replace(/>/g, '&gt;')
+//         .replace(/\n/g, '<br>');
       
-      tempElement.innerHTML = `<div style="white-space: pre-wrap; word-break: break-word;">${formattedContent}</div>`;
+//       tempElement.innerHTML = `<div style="white-space: pre-wrap; word-break: break-word;">${formattedContent}</div>`;
       
-      // Add to document to measure
-      document.body.appendChild(tempElement);
+//       // Add to document to measure
+//       document.body.appendChild(tempElement);
       
-      // Generate canvas from the element with better quality
-      const canvas = await html2canvas(tempElement, {
-        scale: 2.5,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        allowTaint: true
-      });
+//       // Generate canvas from the element with better quality
+//       const canvas = await html2canvas(tempElement, {
+//         scale: 2.5,
+//         useCORS: true,
+//         backgroundColor: '#ffffff',
+//         logging: false,
+//         allowTaint: true
+//       });
       
-      // Remove temporary element
-      document.body.removeChild(tempElement);
+//       // Remove temporary element
+//       document.body.removeChild(tempElement);
       
-      // Create PDF with proper dimensions
-      const imgWidth = 210; // A4 width in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'mm',
-        format: 'a4'
-      });
+//       // Create PDF with proper dimensions
+//       const imgWidth = 210; // A4 width in mm
+//       const imgHeight = (canvas.height * imgWidth) / canvas.width;
+//       const pdf = new jsPDF({
+//         orientation: 'portrait',
+//         unit: 'mm',
+//         format: 'a4'
+//       });
       
-      // Add image to PDF with better quality
-      pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 10, 10, imgWidth - 20, imgHeight - 20);
-      pdf.save(`optimized-content-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.pdf`);
-    } catch (error) {
-      console.error('Error downloading PDF:', error);
-      alert('Failed to download PDF. Please try again.');
-    }
-  };
+//       // Add image to PDF with better quality
+//       pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 10, 10, imgWidth - 20, imgHeight - 20);
+//       pdf.save(`optimized-content-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.pdf`);
+//     } catch (error) {
+//       console.error('Error downloading PDF:', error);
+//       alert('Failed to download PDF. Please try again.');
+//     }
+//   };
 
   // Function to copy content to clipboard
   const copyToClipboard = async () => {
