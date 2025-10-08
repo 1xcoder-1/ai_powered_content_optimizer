@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
 
 interface OutputSectionProps {
   optimizedContent: string;
